@@ -1,0 +1,38 @@
+.news-thumbnail{
+    width : 300px;
+    margin : 20px;
+}
+
+.news-image{
+    height: 450px;
+
+}
+
+.news-card{
+    margin-top: 10px;
+    margin-right: 10px;
+    width : 350px;
+    height : 60vh
+}
+.news-overview{
+    height:80px;
+    overflow-x:hidden;
+    overflow-y: auto;
+    justify-content: newspaper;
+}
+
+.news-title{
+    width : 300px; 
+    height : 100px;
+    overflow-x: hidden;
+}
+
+.news-overview::-webkit-scrollbar{
+    width:2px;
+    background: gray;
+}
+
+#add-button, #delete-button
+{
+    float : right;
+}

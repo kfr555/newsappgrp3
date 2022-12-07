@@ -1,0 +1,25 @@
+  
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a routerLink="list" routerLinkActive="active" class="nav-link">ALL News</a>
+            </li>
+              <li class="nav-item">
+                  <a routerLink="../user/add" routerLinkActive="active" class="nav-link">ADD NEWS</a>
+              </li>
+              <li class="nav-item ml-5">
+                <a routerLink="../user/logout" routerLinkActive="active" class="nav-link bg-danger">LOGOUT</a>
+            </li>
+          </ul>
+  </nav>
+     </div>
+    
+     
+  </div>
+  <div class="row">
+     <router-outlet></router-outlet>
+  </div>
+</div>

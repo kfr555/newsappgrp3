@@ -1,0 +1,38 @@
+
+
+ <hr>
+ <div class="container">
+   <table class="table table-striped">
+     <thead>
+       <tr>
+         <th scope="col">Id</th>
+         <th scope="col">author</th>
+         <th scope="col">title</th>
+         <th scope="col">description</th>
+         <th scope="col">content</th>
+         <th scope="col">publishedAt</th>
+         <th scope="col">name</th>
+         <th scope="col">url</th>
+         <th scope="col">urlToImage</th>
+         <th scope="col">ACTIONS</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let news of products" >
+         <td>{{news.Id}}</td>
+         <td>{{news.author}}</td>
+         <td>{{news.title}}</td>
+         <td>{{news.description}}</td>
+         <td>{{news.content}}</td>
+         <td>{{news.publishedAt}}</td>
+         <td>{{news.url}}</td>
+         <td>{{news.urlToImage}}</td>
+         <td>
+          
+           <button (click)="deleteProduct(product.id)" class="btn btn-danger" style="margin-left:11px;">DELETE</button>
+         
+         </td>
+       </tr>
+        
+     </tbody>
+   </table>
