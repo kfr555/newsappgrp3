@@ -1,0 +1,10 @@
+package com.cgi.userservice.services;
+
+import java.util.Map;
+
+import com.cgi.userservice.model.User;
+
+public interface SecurityTokenGenerator {
+	Map<String, String> generateToken(User userLogin);
+
+}

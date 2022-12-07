@@ -1,0 +1,125 @@
+package com.cgi.userservice.vo;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
+
+public class News {
+
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer newsId;
+	private String title;
+	private String author;
+	private String description;
+
+	@JsonSerialize(using = ToStringSerializer.class)
+	private LocalDateTime publishedAt;
+	private String content;
+	private String url;
+	private String urlToImage;
+
+	
+	public News() {
+		this.publishedAt = LocalDateTime.now();
+	}
+
+	public News(Integer newsId, String title, String author, String description, LocalDateTime publishedAt,
+				String content, String url, String urlToImage) {
+		super();
+		this.newsId = newsId;
+		this.title = title;
+		this.author = author;
+		this.description = description;
+		this.content = content;
+		this.url = url;
+		this.urlToImage = urlToImage;
+		
+	}
+
+	public Integer getNewsId() {
+		return newsId;
+	}
+
+	public void setNewsId(Integer newsId) {
+		this.newsId = newsId;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public LocalDateTime getPublishedAt() {
+		return publishedAt;
+	}
+
+	public void setPublishedAt(LocalDateTime publishedAt) {
+		this.publishedAt = publishedAt;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+
+	public String getUrlToImage() {
+		return urlToImage;
+	}
+
+	public void setUrlToImage(String urlToImage) {
+		this.urlToImage = urlToImage;
+	}
+	@Override
+	public String toString() {
+		return "News [newsId=" + newsId + ", title=" + title + ", author=" + author + ", description=" + description
+				+ ", publishedAt=" + publishedAt + ", content=" + content + ", url=" + url + ", urlToImage="
+				+ urlToImage + "]";
+	}
+
+	
+}

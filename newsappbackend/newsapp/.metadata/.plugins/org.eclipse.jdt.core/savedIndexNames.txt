@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\USER\Downloads\newsapp\newsapp\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+4106435274.index
+2290603.index
+2043031748.index
+2960399442.index

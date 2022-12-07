@@ -1,0 +1,176 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (arena.cpp:78), pid=3440, tid=11700
+#
+# JRE version:  (17.0.4.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.4.1+1, mixed mode, emulated-client, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8080 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=admin-services -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages com.grpf.adminservices.AdminServicesApplication --spring.output.ansi.enabled=always
+
+Host: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, 8 cores, 3G,  Windows 11 , 64 bit Build 22000 (10.0.22000.1219)
+Time: Tue Dec  6 15:35:34 2022 India Standard Time elapsed time: 0.157367 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000010f4b832ec0):  JavaThread "Unknown thread" [_thread_in_vm, id=11700, stack(0x0000000626700000,0x0000000626800000)]
+
+Stack: [0x0000000626700000,0x0000000626800000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67731a]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff87ed44e98, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000010f4b832ec0 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=11700, stack(0x0000000626700000,0x0000000626800000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Not initialized>
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6f68e0000 - 0x00007ff6f68ee000 	D:\spring core\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\javaw.exe
+0x00007ff8d6340000 - 0x00007ff8d6549000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff8d5dd0000 - 0x00007ff8d5e8e000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff8d3b10000 - 0x00007ff8d3e8b000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff8d3e90000 - 0x00007ff8d3fa1000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff8bf6a0000 - 0x00007ff8bf6b8000 	D:\spring core\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\jli.dll
+0x00007ff8aef90000 - 0x00007ff8aefa9000 	D:\spring core\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\VCRUNTIME140.dll
+0x00007ff8d5bc0000 - 0x00007ff8d5d6d000 	C:\Windows\System32\USER32.dll
+0x00007ff8d3fb0000 - 0x00007ff8d3fd6000 	C:\Windows\System32\win32u.dll
+0x00007ff8d4680000 - 0x00007ff8d46a9000 	C:\Windows\System32\GDI32.dll
+0x00007ff8bab70000 - 0x00007ff8bae15000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ff8d3880000 - 0x00007ff8d3998000 	C:\Windows\System32\gdi32full.dll
+0x00007ff8d47d0000 - 0x00007ff8d4873000 	C:\Windows\System32\msvcrt.dll
+0x00007ff8d3fe0000 - 0x00007ff8d407d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff8d4380000 - 0x00007ff8d43b2000 	C:\Windows\System32\IMM32.DLL
+0x00007ff8c6480000 - 0x00007ff8c648c000 	D:\spring core\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\vcruntime140_1.dll
+0x00007ff88cf00000 - 0x00007ff88cf91000 	D:\spring core\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\msvcp140.dll
+0x00007ff87e230000 - 0x00007ff87ee76000 	D:\spring core\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\server\jvm.dll
+0x00007ff8d4b00000 - 0x00007ff8d4bae000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff8d4c10000 - 0x00007ff8d4cae000 	C:\Windows\System32\sechost.dll
+0x00007ff8d5060000 - 0x00007ff8d5180000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff8d43c0000 - 0x00007ff8d43c8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff8ce440000 - 0x00007ff8ce449000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff8d5b50000 - 0x00007ff8d5bbf000 	C:\Windows\System32\WS2_32.dll
+0x00007ff8cd660000 - 0x00007ff8cd693000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff8cddc0000 - 0x00007ff8cddca000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff8d2850000 - 0x00007ff8d2868000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff8c6510000 - 0x00007ff8c651a000 	D:\spring core\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\jimage.dll
+
+dbghelp: loading error: 1455
+symbol engine: initialization error.
+
+VM Arguments:
+jvm_args: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8080 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=admin-services -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: com.grpf.adminservices.AdminServicesApplication --spring.output.ansi.enabled=always
+java_class_path (initial): C:\Users\USER\Downloads\newsapp\newsapp\admin-services\target\classes;C:\Users\USER\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.7.5\spring-boot-starter-data-jpa-2.7.5.jar;C:\Users\USER\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.7.5\spring-boot-starter-aop-2.7.5.jar;C:\Users\USER\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar;C:\Users\USER\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.7.5\spring-boot-starter-jdbc-2.7.5.jar;C:\Users\USER\.m2\repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar;C:\Users\USER\.m2\repository\org\springframework\spring-jdbc\5.3.23\spring-jdbc-5.3.23.jar;C:\Users\USER\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\USER\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\USER\.m2\repository\org\hibernate\hibernate-core\5.6.12.Final\hibernate-core-5.6.12.Final.jar;C:\Users\USER\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\USER\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\USER\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\USER\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\USER\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\USER\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.7\jaxb-runtime-2.3.7.jar;C:\Users\USER\.m2\repository\org\glassfish\jaxb\txw2\2.3.7\txw2-2.3.7.jar;C:\Users\USER\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\USER\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\USER\.m2\repository\org\springframework\data\spring-data-jpa\2.7.5\spring-data-jpa-2.7.5.jar;C:\Users\U
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 64919744                                  {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1038715904                                {product} {ergonomic}
+   size_t MinHeapSize                              = 6815736                                   {product} {ergonomic}
+     bool ProfileInterpreter                       = false                                  {pd product} {command line}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_301
+PATH=D:/spring core/sts-4.16.1.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257/jre/bin/server;D:/spring core/sts-4.16.1.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_301\bin;C:\Program Files\Java\jre1.8.0_301\bin;C:\Program Files\MongoDB\Server\6.0\bin;C:\Program Files\Docker\Docker\resources\bin;D:\front-end softwares\nodejs app;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\USER\AppData\Local\Microsoft\WindowsApps;;D:\D\Microsoft VS Code\bin;C:\Users\USER\AppData\Roaming\npm;D:\spring core\sts-4.16.1.RELEASE;
+USERNAME=USER
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+TMP=C:\Users\USER\AppData\Local\Temp
+TEMP=C:\Users\USER\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22000 (10.0.22000.1219)
+OS uptime: 0 days 4:28 hours
+
+CPU: total 8 (initial active 8) 
+
+Memory: 4k page, system-wide physical 3962M (285M free)
+TotalPageFile size 10106M (AvailPageFile size 0M)
+current process WorkingSet (physical memory assigned to process): 6M, peak: 6M
+current process commit charge ("private bytes"): 2M, peak: 2M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.4.1+1) for windows-amd64 JRE (17.0.4.1+1), built on Aug 17 2022 07:42:43 by "temurin" with MS VC++ 16.7 (VS2019)
+
+END.

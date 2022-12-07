@@ -1,0 +1,8 @@
+FROM java:8-jre
+WORKDIR usr/src
+ENV MYSQL_DATABASE=db
+ENV MYSQL_USER=root
+ENV MYSQL_PASSWORD=vyshu
+ENV MYSQL_CI_URL=jdbc:mysql://localhost:3306/db
+ADD ./target/favouriteservice.jar /usr/src/favouriteservice.jar
+ENTRYPOINT ["java", "-jar", "favouriteservice.jar"]

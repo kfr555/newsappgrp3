@@ -1,0 +1,5 @@
+package com.cgi.userservice.vo;
+
+public class FavouriteNews {
+
+}

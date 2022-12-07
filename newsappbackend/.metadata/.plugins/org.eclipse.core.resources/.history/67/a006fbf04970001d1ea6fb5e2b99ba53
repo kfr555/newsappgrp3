@@ -1,0 +1,5 @@
+package com.grpf.adminservices.model;
+
+public class FavoriteNews {
+
+}

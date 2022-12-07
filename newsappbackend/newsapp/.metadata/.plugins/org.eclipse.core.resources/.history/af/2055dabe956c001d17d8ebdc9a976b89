@@ -1,0 +1,5 @@
+package com.cgi.userservice.model;
+
+public class UserLogin {
+
+}

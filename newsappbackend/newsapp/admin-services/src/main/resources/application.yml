@@ -1,0 +1,4 @@
+#write the application name
+spring:
+  application:
+    name: ADMIN-SERVICE

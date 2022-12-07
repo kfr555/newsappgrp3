@@ -1,0 +1,5 @@
+package com.cgi.userservice.repository;
+
+public interface UserRepository {
+
+}

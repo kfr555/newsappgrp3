@@ -1,0 +1,5 @@
+package com.grpf.adminservices.controller;
+
+public class AuthRequest {
+
+}

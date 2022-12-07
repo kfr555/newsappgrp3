@@ -1,0 +1,5 @@
+package com.cgi.userservice.aspect;
+
+public class UserLoggerAspect {
+
+}
